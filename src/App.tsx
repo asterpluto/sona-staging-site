@@ -28,7 +28,7 @@ function App() {
 
         <div className="domain-pill">
           <span className="domain-dot" />
-          sonacare.com
+          sonacares.com
         </div>
 
         <div className="product-tag">
