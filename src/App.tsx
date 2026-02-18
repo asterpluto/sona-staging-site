@@ -22,7 +22,7 @@ function App() {
 
         <h1 className="brand">
           <span className="brand-teal">Sona</span>
-          <span className="brand-dark"> Care</span>
+          <span className="brand-dark"> Cares</span>
         </h1>
         <p className="tagline">Healthcare, Reimagined</p>
 
@@ -33,7 +33,7 @@ function App() {
       </div>
 
       <footer className="footer">
-        &copy; {new Date().getFullYear()} Sona Care
+        &copy; {new Date().getFullYear()} Sona Cares
       </footer>
     </div>
   )
