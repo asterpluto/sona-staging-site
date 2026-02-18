@@ -5,11 +5,9 @@
   --navy: #0f172a;
   --slate: #475569;
   --muted: #94a3b8;
-  --white: #ffffff;
   --off-white: #f8fafc;
 }
 
-/* ── Page shell ── */
 .page {
   min-height: 100vh;
   background: var(--off-white);
@@ -20,10 +18,9 @@
   padding: 40px 24px;
   position: relative;
   overflow: hidden;
-  color: var(--navy);
 }
 
-/* ── Animated background blobs ── */
+/* ── Background blobs ── */
 .bg {
   position: fixed;
   inset: 0;
@@ -63,7 +60,7 @@
   background: var(--teal);
   top: 45%;
   left: 50%;
-  transform: translateX(-50%);
+  animation-name: float3;
   animation-delay: 8s;
 }
 
@@ -72,16 +69,12 @@
   50%       { transform: translateY(-30px) scale(1.04); }
 }
 
-.blob-3 {
-  animation-name: float3;
-}
-
 @keyframes float3 {
   0%, 100% { transform: translateX(-50%) translateY(0) scale(1); }
   50%       { transform: translateX(-50%) translateY(-30px) scale(1.04); }
 }
 
-/* ── Glass card ── */
+/* ── Card ── */
 .card {
   position: relative;
   z-index: 1;
@@ -90,8 +83,8 @@
   -webkit-backdrop-filter: blur(20px);
   border: 1px solid rgba(255, 255, 255, 0.9);
   border-radius: 28px;
-  padding: 60px 56px;
-  max-width: 580px;
+  padding: 56px 52px;
+  max-width: 440px;
   width: 100%;
   text-align: center;
   box-shadow:
@@ -106,7 +99,7 @@
   to   { opacity: 1; transform: translateY(0); }
 }
 
-/* ── Logo icon ── */
+/* ── Logo ── */
 .logo-wrap {
   display: inline-flex;
   align-items: center;
@@ -144,13 +137,13 @@
   border: 1px solid rgba(13, 148, 136, 0.2);
 }
 
-/* ── Brand name ── */
+/* ── Brand ── */
 .brand {
   font-family: 'Playfair Display', Georgia, serif;
-  font-size: clamp(36px, 7vw, 52px);
+  font-size: clamp(40px, 8vw, 56px);
   font-weight: 700;
-  line-height: 1.12;
-  margin-bottom: 4px;
+  line-height: 1.1;
+  margin-bottom: 8px;
 }
 
 .brand-teal {
@@ -166,139 +159,9 @@
 
 .tagline {
   font-size: 15px;
-  font-weight: 400;
   color: var(--slate);
   margin-bottom: 32px;
   line-height: 1.6;
-}
-
-/* ── Divider ── */
-.divider {
-  width: 48px;
-  height: 3px;
-  background: linear-gradient(90deg, var(--teal), #0891b2);
-  border-radius: 4px;
-  margin: 0 auto 32px;
-}
-
-/* ── Body text ── */
-.body-text {
-  font-size: 15px;
-  color: var(--slate);
-  line-height: 1.75;
-  margin-bottom: 36px;
-}
-
-/* ── Feature pills ── */
-.pills {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  justify-content: center;
-  margin-bottom: 40px;
-}
-
-.pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 7px;
-  background: rgba(13, 148, 136, 0.07);
-  border: 1px solid rgba(13, 148, 136, 0.18);
-  border-radius: 100px;
-  padding: 8px 16px;
-  font-size: 13px;
-  font-weight: 500;
-  color: var(--teal);
-}
-
-.pill svg {
-  width: 14px;
-  height: 14px;
-  stroke: currentColor;
-  stroke-width: 2.2;
-  fill: none;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  flex-shrink: 0;
-}
-
-/* ── Notify form ── */
-.cta-group {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 12px;
-  margin-bottom: 36px;
-}
-
-.cta-label {
-  font-size: 13px;
-  color: var(--muted);
-  font-weight: 500;
-}
-
-.email-form {
-  display: flex;
-  gap: 8px;
-  width: 100%;
-  max-width: 380px;
-}
-
-.email-input {
-  flex: 1;
-  padding: 12px 18px;
-  border: 1.5px solid rgba(13, 148, 136, 0.25);
-  border-radius: 12px;
-  font-size: 14px;
-  font-family: inherit;
-  background: rgba(255, 255, 255, 0.85);
-  color: var(--navy);
-  outline: none;
-  transition: border-color 0.2s, box-shadow 0.2s;
-}
-
-.email-input::placeholder {
-  color: var(--muted);
-}
-
-.email-input:focus {
-  border-color: var(--teal);
-  box-shadow: 0 0 0 3px rgba(13, 148, 136, 0.12);
-}
-
-.notify-btn {
-  padding: 12px 22px;
-  background: linear-gradient(135deg, var(--teal), #0891b2);
-  color: white;
-  border: none;
-  border-radius: 12px;
-  font-size: 14px;
-  font-weight: 600;
-  font-family: inherit;
-  cursor: pointer;
-  white-space: nowrap;
-  transition: opacity 0.2s, transform 0.15s, box-shadow 0.2s;
-  box-shadow: 0 4px 14px rgba(13, 148, 136, 0.35);
-}
-
-.notify-btn:hover:not(:disabled) {
-  opacity: 0.92;
-  transform: translateY(-1px);
-  box-shadow: 0 6px 20px rgba(13, 148, 136, 0.45);
-}
-
-.notify-btn:active {
-  transform: translateY(0);
-}
-
-.notify-btn:disabled {
-  cursor: default;
-}
-
-/* ── Success state ── */
-.notify-btn.success {
-  background: linear-gradient(135deg, #16a34a, #15803d);
-  box-shadow: 0 4px 14px rgba(22, 163, 74, 0.35);
 }
 
 /* ── Domain pill ── */
@@ -333,25 +196,13 @@
 .footer {
   position: relative;
   z-index: 1;
-  margin-top: 28px;
+  margin-top: 24px;
   font-size: 12px;
   color: var(--muted);
-  text-align: center;
-  line-height: 1.7;
 }
 
-/* ── Responsive ── */
-@media (max-width: 520px) {
+@media (max-width: 480px) {
   .card {
     padding: 44px 28px;
-  }
-
-  .email-form {
-    flex-direction: column;
-  }
-
-  .notify-btn {
-    width: 100%;
-    padding: 14px;
   }
 }
