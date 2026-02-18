@@ -30,6 +30,13 @@ function App() {
           <span className="domain-dot" />
           sonacare.com
         </div>
+
+        <div className="product-tag">
+          A product of{' '}
+          <a href="https://machanirobotics.com" target="_blank" rel="noopener noreferrer">
+            machanirobotics.com
+          </a>
+        </div>
       </div>
 
       <footer className="footer">
